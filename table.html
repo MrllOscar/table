@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table homework</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+    integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA=="
+    crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"
+    integrity="sha512-a6ctI6w1kg3J4dSjknHj3aWLEbjitAXAjLDRUxo2wyYmDFRcz2RJuQr5M3Kt8O/TtUSp8n2rAyaXYy1sjoKmrQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <!-- <link    rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"  /> -->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <style>
+    body {
+      background: #ccc;
+      font-family: "Microsoft JhengHei",arial;
+    }
+
+    .buttondiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    table {
+      border: 1px solid #000;
+      text-align: center;
+      margin: 2%;
+    }
+    table>thead{
+      background: #EEE;
+    }
+    table> tbody > tr:nth-of-type(even){
+      background-color: #faa;
+    }
+    table> tbody > tr:nth-of-type(odd){
+      background-color: #caa;
+    }
+    table> tbody > tr:hover{
+      background-color: #f77;
+      font-weight: bolder;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    tr>*{
+      width: 8%;
+    }
+
+    tr>*:hover {
+      animation: flipInX 1s ease-in 50ms;
+    }
+
+    @keyframes flipInX {
+      0% {
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        transform: perspective(400px) rotateX(90deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0
+      }
+
+      40% {
+        -webkit-transform: perspective(400px) rotateX(-20deg);
+        transform: perspective(400px) rotateX(-20deg);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in
+      }
+
+      60% {
+        -webkit-transform: perspective(400px) rotateX(10deg);
+        transform: perspective(400px) rotateX(10deg);
+        opacity: 1
+      }
+
+      80% {
+        -webkit-transform: perspective(400px) rotateX(-5deg);
+        transform: perspective(400px) rotateX(-5deg)
+      }
+
+      to {
+        -webkit-transform: perspective(400px);
+        transform: perspective(400px)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="text-align: center;">待購買物品</h1>
+  <div class="buttondiv">
+    <button id="A">品名</button>
+    <button id="B">型號</button>
+    <button id="C">原因</button>
+    <button id="D">連結</button>
+    <button id="E">價格</button>
+    <button id="F">日期</button>
+    <button id="G">狀況</button>
+    <button id="H">實際消費</button>
+    <button id="I">使用年限</button>
+    <button id="J">備註</button>
+  </div>
+  <table>
+    <thead>
+    <tr>
+      <th class="A">品名</th>
+      <th class="B">型號</th>
+      <th class="C">原因</th>
+      <th class="D">連結</th>
+      <th class="E">價格</th>
+      <th class="F">日期</th>
+      <th class="G">狀況</th>
+      <th class="H">實際消費</th>
+      <th class="I">使用年限</th>
+      <th class="J">備註</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="A">UPS CyberPower-CP1000AVRLCD</td>
+      <td class="B">B.B BATTERY HR9-12<br>REW45-12FR</td>
+      <td class="C">使用年限超過七年，斷電無法蓄電</td>
+      <td class="D">https://reurl.cc/Q9o1Xp<br>https://reurl.cc/1YWn1D<br>https://reurl.cc/83Vrj7</td>
+      <td class="E">≒1000<br>≒500</td>
+      <td class="F">2021/07/29</td>
+      <td class="G">仍不會斷電但需盡快更換</td>
+      <td class="H">尚未購買</td>
+      <td class="I">七年</td>
+      <td class="J">應七年更換一次</td>
+    </tr>
+    <tr>
+      <td class="A">ASUS平板 </td>
+      <td class="B">Z581KL</td>
+      <td class="C">開機出現工程畫面無法更新與重置</td>
+      <td class="D">需聯絡店家修理</td>
+      <td class="E">≒1000</td>
+      <td class="F">2021/07/29</td>
+      <td class="G">不緊急但平板如廢鐵般無用</td>
+      <td class="H">尚未修理</td>
+      <td class="I">2016至今</td>
+      <td class="J">螢幕也有裂痕，太貴的話考慮不做修理</td>
+    </tr>
+    <tr>
+      <td class="A">ASUS ROG GL703GS</td>
+      <td class="B">ADP-230GB B</td>
+      <td class="C">無法正常充電至電池</td>
+      <td class="D">https://reurl.cc/eEbvNM<br>https://reurl.cc/MAm1Qn</td>
+      <td class="E">≒700~2000</td>
+      <td class="F">2021/07/29</td>
+      <td class="G">若插著電源仍可使用，拔掉即斷電，若要外出就非常緊急</td>
+      <td class="H">尚未</td>
+      <td class="I">2018/10至今</td>
+      <td class="J">已購買電池仍無法充電，排除電池可能</td>
+    </tr>
+    <tr>
+      <td class="A">小米空氣清淨機3</td>
+      <td class="B">濾心</td>
+      <td class="C">機器提示濾心需更換</td>
+      <td class="D">https://reurl.cc/ZGdaDl</td>
+      <td class="E">原廠≒800，副廠≒400</td>
+      <td class="F">買後幾個月</td>
+      <td class="G">網路提示可用吸塵器吸後重置濾心</td>
+      <td class="H"></td>
+      <td class="I">可能幾個月就得換一次</td>
+      <td class="J">不緊急可不用花費考慮給空壓機噴看看</td>
+    </tr>
+    <tr>
+      <td class="A">電腦椅子</td>
+      <td class="B">enjoy121、Brant 131、Ergohuman 111、Embody</td>
+      <td class="C">打code在電腦前久坐，越坐身體越不舒服</td>
+      <td class="D">https://reurl.cc/5rLoVv<br>https://24h.pchome.com.tw/store/DCAK8X</td>
+      <td class="E">6500、10000+、11000+、48000+</td>
+      <td class="F">2021/05/14</td>
+      <td class="G">椅子仍可使用，但能撐多久不知道</td>
+      <td class="H">未知</td>
+      <td class="I">二手不清楚</td>
+      <td class="J">要找時間去景美景興街試坐</td>
+    </tr>
+    <tr>
+      <td class="A">摩托車</td>
+      <td class="B">未定</td>
+      <td class="C">代步address不斷怠速熄火，找了兩家修了2000多沒好</td>
+      <td class="D">仍須找店家修理或是換新</td>
+      <td class="E">修理:未知<br>換新:非二手8w起跳</td>
+      <td class="F">2021/03/01</td>
+      <td class="G">怠速熄火，危險性高</td>
+      <td class="H">2000+(增加中)</td>
+      <td class="I">10年以上</td>
+      <td class="J">目前非長途狀況較少，仍需觀察是否有店家可以修理</td>
+    </tr>
+    <tr>
+      <!-- 品名,型號,原因,連結,價格,日期,狀況,實際消費,使用年限,備註 -->
+      <td class="A">手機</td>
+      <td class="B">iphone12/13</td>
+      <td class="C">6s螢幕碎裂程式跑不動，到退休年齡，可能當另一支手機的備用</td>
+      <td class="D">https://www.apple.com/tw/iphone/</td>
+      <td class="E">粗估≒40000上下</td>
+      <td class="F">2020/10/01</td>
+      <td class="G">仍可使用，但撐多久不知道，可能要考慮換新螢幕和螢幕貼</td>
+      <td class="H">未知</td>
+      <td class="I">6年(2015至今)</td>
+      <td class="J">金額昂貴但仍是考慮範圍，10月才出13價格會有波動</td>
+    </tr>
+  </tbody>
+    <script>
+      $('button').click(function () {
+        // $(`#${getId}`).click(()=>{
+        var getId = $(this).attr('id');
+        $(`.${getId}`).toggle();
+      })
+        // $('td').hover(function(){
+        //   $(this).css("animation","flipInX");
+        //   // $(this).attr("class","animate__flipInX");
+        //   // $(this).attr("class","wow flipInX");
+        // })
+    </script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous"></script>
+        <script>
+          new WOW().init();
+          </script> -->
+  </table>
+
+</body>
+
+</html>
